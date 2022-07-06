@@ -1,0 +1,35 @@
+<div class="mt10 pl10 pr10" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="flex-end">
+  <mat-form-field class="search-form-field" appearance="fill">
+    <mat-label>Search here...</mat-label>
+    <input matInput type="text" [(ngModel)]="searchText">
+    <button  matSuffix mat-icon-button aria-label="Clear" (click)="searchTvShows()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+<div>
+    <div *ngFor="let tvshow of tvshows$ | async">
+        <mat-card class="tvshow-card">
+            <mat-card-title-group>
+              <mat-card-title>{{tvshow.title}}</mat-card-title>
+              <mat-card-subtitle>{{tvshow.name}}</mat-card-subtitle>
+              <img (click)="getShowDetailById(tvshow.id??0)" mat-card-sm-image src="../../../assets/images/movieimage.png" >
+            </mat-card-title-group>
+            <mat-card-content>
+              {{tvshow.description}}
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions>
+                <button mat-icon-button color="warn" aria-label="favorite">
+                    <mat-icon>favorite</mat-icon>
+                  </button>
+                  <button mat-icon-button color="basic" aria-label="watched">
+                    <mat-icon>visibility</mat-icon>
+                  </button>
+                  <button mat-icon-button color="basic" aria-label="watch later">
+                    <mat-icon>watch_later</mat-icon>
+                  </button>                 
+            </mat-card-actions>
+          </mat-card>
+        </div>
+</div>

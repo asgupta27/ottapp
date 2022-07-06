@@ -1,0 +1,43 @@
+{
+  "movies": [
+    {
+      "name": "DDLJ",
+      "title": "DDLJ",
+      "description": "DDLJ",
+      "imdbrating": "10",
+      "language": "Hindi",
+      "genere": "Romance",
+      "id": 1
+    },
+    {
+      "name": "DDLJ",
+      "title": "DDLJ",
+      "description": "DDLJ",
+      "imdbrating": "10",
+      "language": "Hindi",
+      "genere": "Romance",
+      "id": 2
+    },
+    {
+      "name": "Hangama",
+      "title": "Hangama",
+      "description": "Hangama",
+      "imdbrating": "8",
+      "language": "English",
+      "genere": "Comedy",
+      "id": 3
+    }
+  ],
+  "users":[
+    {
+      "username": "dummy",
+       "password": "1234",
+       "isadmin": 0
+    },
+    {
+      "username": "admin",
+       "password": "1234",
+       "isadmin": 1
+    }
+  ]
+}
